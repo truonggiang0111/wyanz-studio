@@ -1027,12 +1027,12 @@ a {
   }
 
   .header-inner {
-    height: 58px;
-    gap: 8px;
+    height: 56px;
+    gap: 6px;
   }
 
   .brand-word {
-    font-size: 19px;
+    font-size: 17px;
   }
 
   .brand-sub {
@@ -1040,17 +1040,17 @@ a {
   }
 
   .header-nav {
-    gap: 10px;
+    gap: 8px;
   }
 
   .nav-link {
-    font-size: 12px;
+    font-size: 11px;
     white-space: nowrap;
   }
 
   .btn-header-cta {
-    padding: 7px 10px;
-    font-size: 11px;
+    padding: 6px 9px;
+    font-size: 10.5px;
     white-space: nowrap;
   }
 
