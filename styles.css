@@ -1042,6 +1042,21 @@ a {
     padding: 0 16px;
   }
 
+  .header-inner {
+    height: 60px;
+    gap: 8px;
+  }
+
+  .brand-word {
+    font-size: 21px;
+  }
+
+  .btn-header-cta {
+    padding: 8px 12px;
+    font-size: 11.5px;
+    white-space: nowrap;
+  }
+
   .header-nav,
   .brand-sub {
     display: none;
