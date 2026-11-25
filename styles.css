@@ -880,6 +880,18 @@ a {
   border: 2px solid var(--rose);
   background: linear-gradient(180deg, #ffffff 0%, #fdf5f7 100%);
   position: relative;
+  padding-top: 30px;
+}
+
+.price-head {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .featured-pill {
@@ -892,8 +904,9 @@ a {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 5px 12px;
+  padding: 5px 13px;
   border-radius: 999px;
+  white-space: nowrap;
 }
 
 .price-tier {
@@ -1023,16 +1036,23 @@ a {
 
 @media (max-width: 920px) {
   .container {
-    padding: 0 16px;
+    padding: 0 18px;
+  }
+
+  .top-ribbon {
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    line-height: 1.45;
+    padding: 8px 14px;
   }
 
   .header-inner {
-    height: 56px;
-    gap: 6px;
+    height: 62px;
+    gap: 14px;
   }
 
   .brand-word {
-    font-size: 17px;
+    font-size: 21px;
   }
 
   .brand-sub {
@@ -1040,31 +1060,33 @@ a {
   }
 
   .header-nav {
-    gap: 8px;
+    gap: 22px;
   }
 
   .nav-link {
-    font-size: 11px;
+    font-size: 13px;
+    font-weight: 500;
     white-space: nowrap;
   }
 
   .btn-header-cta {
-    padding: 6px 9px;
-    font-size: 10.5px;
+    padding: 8px 14px;
+    font-size: 12.5px;
     white-space: nowrap;
   }
 
   .hero-section {
-    padding: 26px 0 36px;
+    padding: 28px 0 38px;
   }
 
   .hero-grid {
-    grid-template-columns: 1.04fr 0.96fr;
-    gap: 18px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   .hero-title {
     font-size: 27px;
+    line-height: 1.24;
   }
 
   .hero-subtitle {
@@ -1078,104 +1100,186 @@ a {
     font-size: 13px;
   }
 
+  .hero-showcase-card {
+    padding: 12px;
+  }
+
+  .hero-mini-stats {
+    gap: 8px;
+  }
+
   .mini-stat {
-    padding: 8px 6px;
+    padding: 9px 6px;
   }
 
   .mini-stat strong {
-    font-size: 13.5px;
+    font-size: 14.5px;
   }
 
   .mini-stat span {
     font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .mode-switcher {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .mode-tab {
+    padding: 11px 12px;
+    font-size: 12.5px;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .admin-shell {
-    padding: 14px;
+    padding: 18px;
   }
 
   .kpi-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 18px;
   }
 
   .kpi-card {
-    padding: 11px 10px;
+    padding: 14px 16px;
   }
 
   .kpi-value {
-    font-size: 16px;
+    font-size: 20px;
     white-space: nowrap;
   }
 
   .kpi-label,
   .kpi-sub {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .admin-columns {
-    grid-template-columns: 1.08fr 0.92fr;
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .admin-box {
-    padding: 12px;
+    padding: 15px;
   }
 
   .order-row {
-    padding: 10px;
-    gap: 8px;
-  }
-
-  .sku-row {
-    grid-template-columns: 42px 1fr auto;
-    gap: 8px;
-    padding: 9px 10px;
-  }
-
-  .sku-thumb {
-    width: 42px;
-    height: 50px;
-  }
-
-  .portfolio-grid,
-  .pricing-grid {
-    grid-template-columns: repeat(3, 1fr);
+    padding: 12px 14px;
     gap: 12px;
   }
 
+  .sku-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .sku-row {
+    grid-template-columns: 46px 1fr;
+    gap: 10px;
+    padding: 12px;
+    align-items: center;
+  }
+
+  .sku-thumb {
+    width: 46px;
+    height: 54px;
+  }
+
+  .sku-name {
+    font-size: 13px;
+  }
+
+  .sku-variant {
+    font-size: 11.5px;
+  }
+
+  .sku-controls {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .portfolio-card:nth-child(3) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    align-items: stretch;
+  }
+
+  .portfolio-card:nth-child(3) .portfolio-img {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 190px;
+  }
+
   .portfolio-body {
-    padding: 14px;
+    padding: 16px;
   }
 
   .portfolio-title {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .portfolio-desc {
-    font-size: 12.5px;
+    font-size: 13px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .price-card {
-    padding: 18px 12px;
+    padding: 22px 18px;
+  }
+
+  .price-card.featured {
+    grid-column: 1 / -1;
+    padding: 28px 22px 22px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .price-card.featured .price-note {
+    margin-bottom: 0;
+  }
+
+  .price-card.featured .price-features {
+    margin-bottom: 16px;
   }
 
   .price-name {
-    font-size: 16.5px;
+    font-size: 17.5px;
   }
 
   .price-amount {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .price-features li {
-    font-size: 12.5px;
-    padding-left: 16px;
+    font-size: 13px;
+    padding-left: 18px;
   }
 
   .btn-price {
-    padding: 10px;
-    font-size: 12.5px;
+    padding: 11px 14px;
+    font-size: 13px;
+    white-space: nowrap;
   }
 
   .velvet-grid {
@@ -1185,11 +1289,21 @@ a {
 
   .velvet-cards {
     grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .velvet-stat {
+    padding: 16px 12px;
+  }
+
+  .velvet-stat strong {
+    font-size: 23px;
   }
 
   .hero-grid > *,
   .kpi-grid > *,
   .admin-columns > *,
+  .sku-list > *,
   .portfolio-grid > *,
   .pricing-grid > *,
   .order-main,
